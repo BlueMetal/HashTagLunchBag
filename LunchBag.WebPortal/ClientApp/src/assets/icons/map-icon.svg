@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="39px" height="61px" viewBox="0 0 39 61" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>map icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="TV-Main-Copy-3" transform="translate(-608.000000, -787.000000)" stroke-width="3">
+            <g id="los-angeles-copy" transform="translate(477.000000, -45.000000)">
+                <g id="metrics-view-1" transform="translate(34.000000, 443.000000)">
+                    <g id="metric-3" transform="translate(0.000000, 374.000000)">
+                        <g id="map-icon" transform="translate(97.000000, 15.000000)">
+                            <path d="M5.28861042,29.5 L2.00890884,59.1991067 L36.8215878,59.1991067 L33.5418862,29.5 L5.28861042,29.5 Z" id="Rectangle-4" stroke="#FFFFFF"></path>
+                            <path d="M19,41.4593963 L19,18.5" id="Path-16" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <circle id="Oval-6" stroke="#CE4159" cx="19" cy="10" r="8.5"></circle>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,12 @@
+﻿@model LunchBag.Common.Models.EventLocationModel
+
+<tr>
+    @using (Html.BeginCollectionItem("EventLocations"))
+    {
+        <th scope="row">@Html.EditorFor(model => model.Id, new { htmlAttributes = new { @class = "form-control", required = "required" } })</th>
+        <td>@Html.EditorFor(model => model.LocationName, new { htmlAttributes = new { @class = "form-control", required = "required" } })</td>
+        <td>@Html.EditorFor(model => model.Goal, new { htmlAttributes = new { @class = "form-control", required = "required" } })</td>
+        <td>@Html.EditorFor(model => model.GoalStatus, new { htmlAttributes = new { @class = "form-control", required = "required" } })</td>
+        <td><span onclick="if(confirm('Delete?')){$(this).parent().parent().remove(); processLocationLimits();}" class="glyphicon glyphicon-remove btn btn-danger btn-sm" aria-hidden="true"></span></td>
+    }
+</tr>

@@ -1,0 +1,33 @@
+<div class="from-block">
+  <section class="container mx-auto sm:px-10 md:px-20 pb-20" [hidden]="this.isHidden()">
+    <div class="mt-4 flex flex-wrap items-center">
+      <div>
+        <img src="assets/logo.svg" alt="Logo" style="width:236px" />
+      </div>
+      <div class="sm:ml-auto text-red event-registration tracking-36">Event Registration</div>
+    </div>
+
+    <button type="button" class="mt-4 btn-txt" (click)="goBack()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="54" height="15" viewBox="0 0 54 15">
+        <g fill="#9B9B9B" fill-rule="evenodd" transform="translate(0 -4)">
+          <polygon points="15.95 11.85 1.91 11.85 8.05 18 7.35 18.7 0 11.35 7.35 4 8.05 4.7 1.91 10.85 15.95 10.85" />
+          <text font-family="Segoe UI Web" font-size="14" font-weight="500" letter-spacing=".25">
+            <tspan x="23" y="15">Back</tspan>
+          </text>
+        </g>
+      </svg>
+    </button>
+
+    <div [hidden]="!this.donate.donor.userExist">
+      <div class="mt-4">
+        <p class="md:text-xl tracking-36">{{this.donate.donor.firstName}}, great to see you again!</p>
+        <p class="mt-4 md:text-xl tracking-36">Please make a one-time donation to help cover the supplies for today. All contributions are tax deductible!</p>
+      </div>
+    </div>
+
+
+    <!-- <p class="mt-4 md:text-xl tracking-36">Thanks for coming! Please let us know a bit more about yourself.</p> -->
+    <app-form-info [donate]="donate" (eventFromForm)="eventFromForm($event)"></app-form-info>
+
+  </section>
+</div>

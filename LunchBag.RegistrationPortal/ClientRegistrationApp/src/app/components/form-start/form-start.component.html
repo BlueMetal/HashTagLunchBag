@@ -1,0 +1,18 @@
+<div class="emailBlock">
+  <form class="mt-10 sm:mt-14" (ngSubmit)="onSubmit()" #startForm="ngForm">
+    <label class="text-teal text-base tracking-43 sm:text-2xl" for="_eml">What’s your email address?</label>
+    <input type="email" id="_eml" required [(ngModel)]="donate.donor.email" name="eml" #eml="ngModel" [email]="true" class="w-full text-base mt-1 sm:mt-4 tracking-43  sm:text-2xl"
+      placeholder="Enter email address" />
+    <div class="mt-4 text-error" [hidden]="donate.donor.email.length <= 6 || eml.valid || eml.pristine">Please enter a valid email address</div>
+
+    <div class="flex flex-no-wrap items-center">
+      <div class="mt-4 sm:pr-20 sm:mt-10 text-xs text-grey-dark tracking-21">Your info is safe with us. We’ll only use your email to let you know about future events, provide updates about HashtagLunchbag,
+        and allow you to manage your membership.
+      </div>
+      <div>
+        <button type="submit" class="mt-6 bg-teal text-white text-xl leading-loose py-1 px-10 tracking-43 sm:mt-10 sm:py-2 sm:px-14 sm:text-2xl "
+          [disabled]="!startForm.form.valid">Next</button>
+      </div>
+    </div>
+  </form>
+</div>

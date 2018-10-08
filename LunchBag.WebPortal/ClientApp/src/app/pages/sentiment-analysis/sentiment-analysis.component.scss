@@ -1,0 +1,140 @@
+$color-red :#CE4159;
+$box-height:27vh;
+$font2rem:2vh;
+$font4rem:4vh;
+$font5rem:5vh;
+$font6rem:6vh;
+
+.page_Content {
+    height: 100vh;
+    background-image:  radial-gradient(circle, rgba(242,246,247,0.69), rgba(243,246,248, 1) 65% ), url("../../../assets/images/bg-notewriting.jpg");
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    overflow: hidden;
+}
+
+.track-giving{
+    position: absolute;
+    left: 5vh;
+    bottom: 5vh;
+}
+.sentiment-block{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.title-block{
+    width: 65vw;
+    height:27vh;
+    background-color: $color-red;
+    box-shadow: 0 45px 27px -11px rgba(0,0,0,.5);
+    
+     span { 
+        display:block;
+        position: relative; 
+        left:3vw;
+        color: #fff;
+    }
+}
+.now-text{
+    font-size: $font4rem;
+    top: 2vh;
+}
+.main-text{
+    top: 1.5vh;
+    height: 17vh;
+    width: 61vw;
+    font-size: $font5rem;
+    line-height: 5vh;
+    word-wrap: break-word;
+}
+
+.pencil{
+    height: 3rem;
+    padding-right: 15px;
+    padding-bottom: 15px;
+}
+
+.sa-box{
+    display: block;
+    height: $box-height;
+    position: absolute;
+    box-shadow: 0 30px 27px -15px rgba(0,0,0,.5);
+
+    color: #fff;
+    span { 
+        display:block;
+        position: relative; 
+        color: #fff;
+    }
+}
+.sa-box-hope{
+    top:30vh;
+    left: -8vh;
+    width: $box-height;
+    background-color: #2BA3B5;
+}
+
+.sa-box-mid-image{
+    top:30vh;
+    left: 21vh;
+    width: 2* $box-height;
+    background-color: gray;
+
+}
+
+
+.sa-box-care{
+    top:30vh;
+    left: 77vh;
+    width: $box-height;
+    background-color: #41B8F0;
+}
+
+.sa-box-left-image{
+    top:60vh;
+    left: 15vh;
+    width: $box-height;
+    background-color: gray;
+}
+
+.sa-box-love{
+    top:60vh;
+    left: 44vh;
+    width: $box-height;
+    background-color:$color-red;
+}
+
+.sa-box-right-image{
+    top:60vh;
+    left: 73vh;
+    width: 2 * $box-height;
+    background-color: gray;
+}
+.graph-icon{
+    height: 6vh;
+}
+
+.icon-text{
+    font-size: 4vh;
+    top: 15px;
+    left: 5px;
+    
+}
+.percent-text{
+    top: 2vh;
+    width: 100%;
+    text-align: center;
+    font-size: 7vh;
+    letter-spacing: 0.2rem;
+}
+
+.image-box-image{
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 100%;
+    min-height: 100%;
+}
+

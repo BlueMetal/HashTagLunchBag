@@ -1,0 +1,68 @@
+version: '3.4'
+
+services:
+  abi-rabbit:
+    ports:
+     - "5672:5672"
+     - "15672:15672"    
+    volumes:
+     - /var/lib/rabbitmq
+    image: rabbitmq:3-management
+  signalr-redis:
+    ports:
+     - "6379:6379"
+    image: redis
+  lunchbagwebportal:
+    image: lunchbagwebportal
+    build:
+      context: .
+      dockerfile: LunchBag.WebPortal/Dockerfile
+
+  lunchbagwebportalmessageservice:
+    image: lunchbagwebportalmessageservice
+    build:
+      context: .
+      dockerfile: MicroServices/LunchBag.WebPortal.MessageService/Dockerfile
+
+  lunchbagwebportalbuttonservice:
+    image: lunchbagwebportalbuttonservice
+    build:
+      context: .
+      dockerfile: MicroServices/LunchBag.WebPortal.ButtonService/Dockerfile
+
+  lunchbagwebportaltransportservice:
+    image: lunchbagwebportaltransportservice
+    build:
+      context: .
+      dockerfile: MicroServices/LunchBag.WebPortal.TransportService/Dockerfile
+
+  lunchbagwebportalbusservice:
+    image: lunchbagwebportalbusservice
+    build:
+      context: .
+      dockerfile: MicroServices/LunchBag.WebPortal.BusService/Dockerfile
+
+  lunchbagwebportalapi:
+    image: lunchbagwebportalapi
+    build:
+      context: .
+      dockerfile: MicroServices/LunchBag.WebPortal.Api/Dockerfile
+
+
+  lunchbagregistrationportal:
+    image: lunchbagregistrationportal
+    build:
+      context: .
+      dockerfile: LunchBag.RegistrationPortal/Dockerfile
+
+  lunchbagregistrationportalapi:
+    image: lunchbagregistrationportalapi
+    build:
+      context: .
+      dockerfile: MicroServices/LunchBag.RegistrationPortal.Api/Dockerfile
+
+  lunchbagadminportal:
+    image: lunchbagadminportal
+    build:
+      context: .
+      dockerfile: LunchBag.AdminPortal/Dockerfile

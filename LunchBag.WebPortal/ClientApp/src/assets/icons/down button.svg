@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="109px" height="109px" viewBox="0 0 109 109" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>down button</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="50.5" cy="50.5" r="50.5"></circle>
+        <filter x="-6.9%" y="-5.0%" width="113.9%" height="113.9%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="TV-Main-Copy-3" transform="translate(-1765.000000, -320.000000)">
+            <g id="los-angeles-copy" transform="translate(477.000000, -45.000000)">
+                <g id="down-button" transform="translate(1292.000000, 367.000000)">
+                    <g id="Oval-3">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                        <use fill="#2B2A29" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    </g>
+                    <g id="Page-1" transform="translate(51.000000, 50.500000) rotate(-90.000000) translate(-51.000000, -50.500000) translate(28.500000, 29.500000)" stroke="#FFFFFF" stroke-width="4">
+                        <path d="M1.06962025,21.3924051 L44.6900712,21.3924051" id="Stroke-1"></path>
+                        <polyline id="Stroke-3" points="20.9378165 0 0 20.9378165 20.9378165 41.8756329"></polyline>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

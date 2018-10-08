@@ -1,0 +1,23 @@
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Warning"
+    }
+  },
+  "AzureAd": {
+    "Instance": "https://login.microsoftonline.com/"
+  },
+  "ServiceBus": {
+    "Uri": "rabbitmq://abi-rabbit",
+  },
+  "AzureServiceBus": {
+    "QueueName": "lunchbag_iotdeliveryupdate"
+  },
+  "RestService": {
+    "RestServiceUrl": "http://lunchbagwebportalapi.default.svc.cluster.local"
+  },
+  "TransportService": {
+    "PushToQueueTimeToLive": 60,
+	"DistanceToDestinationMilesThreshold": 0.1
+  }
+}

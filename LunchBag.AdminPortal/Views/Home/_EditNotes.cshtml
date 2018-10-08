@@ -1,0 +1,72 @@
+﻿@model EventNotesViewModel
+<div class="form-horizontal">
+    <div class="form-group">
+        @Html.LabelFor(model => model.LastNote, htmlAttributes: new { @class = "control-label col-md-1" })
+        <div class="col-md-4">
+            @Html.EditorFor(model => model.LastNote, new { htmlAttributes = new { @class = "form-control" } })
+        </div>
+        <div class="col-md-1">
+            <input class="btn btn-success pull-right btn-sm" type="button" value="Update" onclick="updateLastNote('@Model.EventId', 'The last note has been updated');" />
+        </div>
+    </div>
+    <div>
+        <input class="btn btn-success pull-right btn-sm" type="button" value="Add Note Template" data-toggle="modal" data-target="#modalAddNoteTemplate" />
+        <input class="btn btn-danger pull-left btn-sm" type="button" value="Delete all Notes received" onclick="if (confirm('Delete all notes?')) { wipeAllNotes('@Model.EventId'); }" />
+    </div>
+    <table id="gridNoteTemplates" class="table table-striped">
+        <thead>
+            <tr>
+                <th>Sentiment</th>
+                <th>Note</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model.NoteTemplates != null)
+            {
+                @Html.EditorFor(model => model.NoteTemplates, new { sentiments = Model.Sentiments })
+            }
+        </tbody>
+    </table>
+</div>
+
+<div class="modal fade" id="modalAddNoteTemplate" tabindex="-1" role="dialog" aria-labelledby="modalAddNoteTemplateLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalAddNoteTemplateLabel">New Note Template</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            @using (Html.BeginForm("AddNoteTemplate", "Home", FormMethod.Post, new { id = "formEvent" }))
+            {
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                @Html.HiddenFor(model => model.EventId)
+                <div class="modal-body">
+
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Sentiments, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.DropDownList("Sentiment", Model.Sentiments, "Select Sentiment", new { @class = "form-control", required = "required" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            @Html.Label("lblNote", "Note", new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.TextBox("Note", "", new { @class = "form-control", required = "required" })
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="addNoteTemplate()">Save changes</button>
+                </div>
+            }
+        </div>
+    </div>
+</div>

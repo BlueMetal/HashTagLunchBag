@@ -1,0 +1,37 @@
+apiVersion: certmanager.k8s.io/v1alpha1
+kind: ClusterIssuer
+metadata:
+  name: letsencrypt-prod
+  namespace: default
+spec:
+  acme:
+    # The ACME server URL
+    server: https://acme-v02.api.letsencrypt.org/directory
+    # Email address used for ACME registration
+    email: thibault.buquet@insight.com
+    # Name of a secret used to store the ACME account private key
+    privateKeySecretRef:
+      name: letsencrypt-prod
+    # Enable HTTP01 validations
+    http01: {}
+    dns01:
+      # Here we define a list of DNS-01 providers that can solve DNS challenges
+      providers:
+      - name: azuredns
+        azuredns:
+          # Service principal clientId (also called appId)
+          clientID: 228a7dd4-5a4d-4f22-9610-4f42301056f3
+          # A secretKeyRef to a service principal ClientSecret (password)
+          # ref: https://docs.microsoft.com/en-us/azure/container-service/kubernetes/container-service-kubernetes-service-principal
+          clientSecretSecretRef:
+            name: azuredns-config
+            key: client-secret
+          # Azure subscription Id
+          subscriptionID: 06eae344-e06b-4d00-8c55-44efd22e452c
+          # Azure AD tenant Id
+          tenantID: ca898deb-7d9a-4a97-8955-9d22bce0f452
+          # ResourceGroup name where dns zone is provisioned
+          resourceGroupName: lunchbag
+          # Name of the hosted zone, if ommited it will be computed from domain provided during certificate creation
+          # hosted zone name is always part of domain name from certificate request
+          #hostedZoneName: k8s.group

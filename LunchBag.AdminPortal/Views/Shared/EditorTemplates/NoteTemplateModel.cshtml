@@ -1,0 +1,11 @@
+﻿@model LunchBag.Common.Models.NoteTemplateModel
+<tr>
+    @using (Html.BeginCollectionItem("Deliveries.Deliveries"))
+    {
+        <th>@Html.DisplayFor(model => model.Sentiment)</th>
+        <td>@Html.DisplayFor(model => model.Note)</td>
+        <td>
+            <span onclick="if (confirm('Delete?')) { deleteNoteTemplate(this, '@Model.Id'); }" class="glyphicon glyphicon-remove btn btn-danger btn-sm" aria-hidden="true"></span>
+        </td>
+    }
+</tr>

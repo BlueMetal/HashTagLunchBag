@@ -1,0 +1,213 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LunchBag.RegistrationPortal.Api", "MicroServices\LunchBag.RegistrationPortal.Api\LunchBag.RegistrationPortal.Api.csproj", "{5FF99207-A563-4A0B-A4AF-8101CE224213}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "LunchBag.Docker.WebPortal", "LunchBag.Docker.WebPortal.dcproj", "{243E0AE1-CBD2-4AE0-A1D6-110CE5F78314}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LunchBag.WebPortal.MessageService", "MicroServices\LunchBag.WebPortal.MessageService\LunchBag.WebPortal.MessageService.csproj", "{B254A552-9FD3-4482-A3D2-33161FF00773}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LunchBag.Common", "MicroServices\LunchBag.Common\LunchBag.Common.csproj", "{19EB5530-B182-4AAF-9ECE-363C3F369E3B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LunchBag.WebPortal.Api", "MicroServices\LunchBag.WebPortal.Api\LunchBag.WebPortal.Api.csproj", "{E06D26C3-4291-4DD9-AB5D-7C0F856788F1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LunchBag.WebPortal.ButtonService", "MicroServices\LunchBag.WebPortal.ButtonService\LunchBag.WebPortal.ButtonService.csproj", "{7D1B0230-BDF4-4D68-AE71-63BCC5B6D7F4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LunchBag.WebPortal", "LunchBag.WebPortal\LunchBag.WebPortal.csproj", "{09424B3C-89D7-47AA-8569-5B49B31457E0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LunchBag.RegistrationPortal", "LunchBag.RegistrationPortal\LunchBag.RegistrationPortal.csproj", "{042F6E6C-694C-4C55-A22B-D76CB7B67F8A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docker", "Docker", "{0820A34A-23F5-4E04-92F2-ACECCAA654B6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MicroServices", "MicroServices", "{D268666A-0584-4B2E-A0E4-30FA8DF564EF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LunchBag.WebPortal.TransportService", "MicroServices\LunchBag.WebPortal.TransportService\LunchBag.WebPortal.TransportService.csproj", "{A20D46D1-D458-4C0D-963F-A92687DFF2C8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LunchBag.Repositories", "MicroServices\LunchBag.Repositories\LunchBag.Repositories.csproj", "{35A6E19E-06A8-4346-A484-72A6F1FCB578}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{AF408110-943A-4BFF-8CBF-6162EA31C3FF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{88039491-B382-4120-B834-FCA229446145}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SignalR", "SignalR", "{0FABCE2C-7F2E-4958-9447-17BE37F3E574}"
+	ProjectSection(SolutionItems) = preProject
+		Tools\SignalR\chat.js = Tools\SignalR\chat.js
+		Tools\SignalR\index.html = Tools\SignalR\index.html
+		Tools\SignalR\signalr.js = Tools\SignalR\signalr.js
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LunchBag.WebPortal.BusService", "MicroServices\LunchBag.WebPortal.BusService\LunchBag.WebPortal.BusService.csproj", "{D592BF91-9C12-4CD1-99DA-C03D1701D5E8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LunchBag.SimulatorApp", "Tools\LunchBag.SimulatorApp\LunchBag.SimulatorApp.csproj", "{898FDE9D-A835-4A2C-BD99-10C1B09F00E3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LunchBag.MobiliyaSimulator", "Tools\LunchBag.MobiliyaSimulator\LunchBag.MobiliyaSimulator.csproj", "{0D6A786E-1191-4D6C-82EA-21404660C5D9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LunchBag.AdminPortal", "LunchBag.AdminPortal\LunchBag.AdminPortal.csproj", "{DE178244-614C-4685-9BD4-15D94E873F29}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{61211A9E-9B43-4D1E-8DDB-5684B3E3234C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Kubernetes", "Kubernetes", "{3D00885B-4BD0-471A-AAC2-F5CF301D12CE}"
+	ProjectSection(SolutionItems) = preProject
+		Kubernetes\lunchbag.kubernetes.prod.deploy.yaml = Kubernetes\lunchbag.kubernetes.prod.deploy.yaml
+		Kubernetes\lunchbag.kubernetes.prod.services.yaml = Kubernetes\lunchbag.kubernetes.prod.services.yaml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{9C940FC4-045A-49F8-89D9-0A5956FE7BB5}"
+	ProjectSection(SolutionItems) = preProject
+		Kubernetes\Scripts\basic-auth.txt = Kubernetes\Scripts\basic-auth.txt
+		Kubernetes\Scripts\launch-dashboard.ps1 = Kubernetes\Scripts\launch-dashboard.ps1
+		Kubernetes\Scripts\set-kubernetes-config.ps1 = Kubernetes\Scripts\set-kubernetes-config.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Config", "Config", "{DE500CDA-68B5-488E-8AC5-5ED3A499BA26}"
+	ProjectSection(SolutionItems) = preProject
+		Kubernetes\Scripts\Config\config-lunchbagadminportal.json = Kubernetes\Scripts\Config\config-lunchbagadminportal.json
+		Kubernetes\Scripts\Config\config-lunchbagregistrationportalapi.json = Kubernetes\Scripts\Config\config-lunchbagregistrationportalapi.json
+		Kubernetes\Scripts\Config\config-lunchbagregistrationportalpaymentservice.json = Kubernetes\Scripts\Config\config-lunchbagregistrationportalpaymentservice.json
+		Kubernetes\Scripts\Config\config-lunchbagwebportalapi.json = Kubernetes\Scripts\Config\config-lunchbagwebportalapi.json
+		Kubernetes\Scripts\Config\config-lunchbagwebportalbusservice.json = Kubernetes\Scripts\Config\config-lunchbagwebportalbusservice.json
+		Kubernetes\Scripts\Config\config-lunchbagwebportalbuttonservice.json = Kubernetes\Scripts\Config\config-lunchbagwebportalbuttonservice.json
+		Kubernetes\Scripts\Config\config-lunchbagwebportalmessageservice.json = Kubernetes\Scripts\Config\config-lunchbagwebportalmessageservice.json
+		Kubernetes\Scripts\Config\config-lunchbagwebportaltransportservice.json = Kubernetes\Scripts\Config\config-lunchbagwebportaltransportservice.json
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ingress", "Ingress", "{AF880828-366B-4137-8704-43BF464126EF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Secrets", "Secrets", "{644D36EB-074D-4753-9854-72DFEBBFAD1E}"
+	ProjectSection(SolutionItems) = preProject
+		Kubernetes\Scripts\Secrets\basic-auth.txt = Kubernetes\Scripts\Secrets\basic-auth.txt
+		Kubernetes\Scripts\Secrets\common.json = Kubernetes\Scripts\Secrets\common.json
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dev-LetsEncrypt", "Dev-LetsEncrypt", "{01625DD4-BF50-44CF-A8F7-A15DB7CE16A4}"
+	ProjectSection(SolutionItems) = preProject
+		Kubernetes\Scripts\Ingress\Dev-LetsEncrypt\0-AddSPSecretForDNS01.ps1 = Kubernetes\Scripts\Ingress\Dev-LetsEncrypt\0-AddSPSecretForDNS01.ps1
+		Kubernetes\Scripts\Ingress\Dev-LetsEncrypt\1-InstallNGINXIngress.ps1 = Kubernetes\Scripts\Ingress\Dev-LetsEncrypt\1-InstallNGINXIngress.ps1
+		Kubernetes\Scripts\Ingress\Dev-LetsEncrypt\2-InstallIngressControllers.ps1 = Kubernetes\Scripts\Ingress\Dev-LetsEncrypt\2-InstallIngressControllers.ps1
+		Kubernetes\Scripts\Ingress\Dev-LetsEncrypt\3-ConfigureDns.ps1 = Kubernetes\Scripts\Ingress\Dev-LetsEncrypt\3-ConfigureDns.ps1
+		Kubernetes\Scripts\Ingress\Dev-LetsEncrypt\4-InstallCertManager.ps1 = Kubernetes\Scripts\Ingress\Dev-LetsEncrypt\4-InstallCertManager.ps1
+		Kubernetes\Scripts\Ingress\Dev-LetsEncrypt\5-ResetIssuerCertificate.ps1 = Kubernetes\Scripts\Ingress\Dev-LetsEncrypt\5-ResetIssuerCertificate.ps1
+		Kubernetes\Scripts\Ingress\Dev-LetsEncrypt\nginx-config-ingress-dnszone-dev.yaml = Kubernetes\Scripts\Ingress\Dev-LetsEncrypt\nginx-config-ingress-dnszone-dev.yaml
+		Kubernetes\Scripts\Ingress\Dev-LetsEncrypt\nginx-config-registrationportal.yaml = Kubernetes\Scripts\Ingress\Dev-LetsEncrypt\nginx-config-registrationportal.yaml
+		Kubernetes\Scripts\Ingress\Dev-LetsEncrypt\nginx-config-webportal.yaml = Kubernetes\Scripts\Ingress\Dev-LetsEncrypt\nginx-config-webportal.yaml
+		Kubernetes\Scripts\Ingress\Dev-LetsEncrypt\nginx-tls-issuer.yaml = Kubernetes\Scripts\Ingress\Dev-LetsEncrypt\nginx-tls-issuer.yaml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Prod", "Prod", "{8F87D02B-062E-42E6-A5E4-DA038A73F6F3}"
+	ProjectSection(SolutionItems) = preProject
+		Kubernetes\Scripts\Ingress\Prod\1-InstallNGINXIngress.ps1 = Kubernetes\Scripts\Ingress\Prod\1-InstallNGINXIngress.ps1
+		Kubernetes\Scripts\Ingress\Prod\2-InstallIngressControllers.ps1 = Kubernetes\Scripts\Ingress\Prod\2-InstallIngressControllers.ps1
+		Kubernetes\Scripts\Ingress\Prod\nginx-config-ingress-prod.yaml = Kubernetes\Scripts\Ingress\Prod\nginx-config-ingress-prod.yaml
+		Kubernetes\Scripts\Ingress\Prod\set-tls-certificate.ps1 = Kubernetes\Scripts\Ingress\Prod\set-tls-certificate.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{89849369-B642-4D6F-9086-5468078E9AE9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LunchBag.WebPortal.MicroServices.Test", "Tests\LunchBag.WebPortal.BusService.Test\LunchBag.WebPortal.MicroServices.Test.csproj", "{0DCB1EF0-2EAA-4A77-AC55-5C00D9CD5F95}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LunchBag.Common.Test", "Tests\LunchBag.Common.Test\LunchBag.Common.Test.csproj", "{BC1AEECE-47BC-4997-94B4-331ED94DA150}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5FF99207-A563-4A0B-A4AF-8101CE224213}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FF99207-A563-4A0B-A4AF-8101CE224213}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FF99207-A563-4A0B-A4AF-8101CE224213}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FF99207-A563-4A0B-A4AF-8101CE224213}.Release|Any CPU.Build.0 = Release|Any CPU
+		{243E0AE1-CBD2-4AE0-A1D6-110CE5F78314}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{243E0AE1-CBD2-4AE0-A1D6-110CE5F78314}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{243E0AE1-CBD2-4AE0-A1D6-110CE5F78314}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{243E0AE1-CBD2-4AE0-A1D6-110CE5F78314}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B254A552-9FD3-4482-A3D2-33161FF00773}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B254A552-9FD3-4482-A3D2-33161FF00773}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B254A552-9FD3-4482-A3D2-33161FF00773}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B254A552-9FD3-4482-A3D2-33161FF00773}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19EB5530-B182-4AAF-9ECE-363C3F369E3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19EB5530-B182-4AAF-9ECE-363C3F369E3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19EB5530-B182-4AAF-9ECE-363C3F369E3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19EB5530-B182-4AAF-9ECE-363C3F369E3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E06D26C3-4291-4DD9-AB5D-7C0F856788F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E06D26C3-4291-4DD9-AB5D-7C0F856788F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E06D26C3-4291-4DD9-AB5D-7C0F856788F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E06D26C3-4291-4DD9-AB5D-7C0F856788F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D1B0230-BDF4-4D68-AE71-63BCC5B6D7F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D1B0230-BDF4-4D68-AE71-63BCC5B6D7F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D1B0230-BDF4-4D68-AE71-63BCC5B6D7F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D1B0230-BDF4-4D68-AE71-63BCC5B6D7F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09424B3C-89D7-47AA-8569-5B49B31457E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09424B3C-89D7-47AA-8569-5B49B31457E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09424B3C-89D7-47AA-8569-5B49B31457E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09424B3C-89D7-47AA-8569-5B49B31457E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{042F6E6C-694C-4C55-A22B-D76CB7B67F8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{042F6E6C-694C-4C55-A22B-D76CB7B67F8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{042F6E6C-694C-4C55-A22B-D76CB7B67F8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{042F6E6C-694C-4C55-A22B-D76CB7B67F8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A20D46D1-D458-4C0D-963F-A92687DFF2C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A20D46D1-D458-4C0D-963F-A92687DFF2C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A20D46D1-D458-4C0D-963F-A92687DFF2C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A20D46D1-D458-4C0D-963F-A92687DFF2C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35A6E19E-06A8-4346-A484-72A6F1FCB578}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35A6E19E-06A8-4346-A484-72A6F1FCB578}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35A6E19E-06A8-4346-A484-72A6F1FCB578}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35A6E19E-06A8-4346-A484-72A6F1FCB578}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D592BF91-9C12-4CD1-99DA-C03D1701D5E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D592BF91-9C12-4CD1-99DA-C03D1701D5E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D592BF91-9C12-4CD1-99DA-C03D1701D5E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D592BF91-9C12-4CD1-99DA-C03D1701D5E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{898FDE9D-A835-4A2C-BD99-10C1B09F00E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{898FDE9D-A835-4A2C-BD99-10C1B09F00E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{898FDE9D-A835-4A2C-BD99-10C1B09F00E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{898FDE9D-A835-4A2C-BD99-10C1B09F00E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D6A786E-1191-4D6C-82EA-21404660C5D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D6A786E-1191-4D6C-82EA-21404660C5D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D6A786E-1191-4D6C-82EA-21404660C5D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D6A786E-1191-4D6C-82EA-21404660C5D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE178244-614C-4685-9BD4-15D94E873F29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE178244-614C-4685-9BD4-15D94E873F29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE178244-614C-4685-9BD4-15D94E873F29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE178244-614C-4685-9BD4-15D94E873F29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DCB1EF0-2EAA-4A77-AC55-5C00D9CD5F95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DCB1EF0-2EAA-4A77-AC55-5C00D9CD5F95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DCB1EF0-2EAA-4A77-AC55-5C00D9CD5F95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DCB1EF0-2EAA-4A77-AC55-5C00D9CD5F95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC1AEECE-47BC-4997-94B4-331ED94DA150}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC1AEECE-47BC-4997-94B4-331ED94DA150}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC1AEECE-47BC-4997-94B4-331ED94DA150}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC1AEECE-47BC-4997-94B4-331ED94DA150}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5FF99207-A563-4A0B-A4AF-8101CE224213} = {D268666A-0584-4B2E-A0E4-30FA8DF564EF}
+		{243E0AE1-CBD2-4AE0-A1D6-110CE5F78314} = {0820A34A-23F5-4E04-92F2-ACECCAA654B6}
+		{B254A552-9FD3-4482-A3D2-33161FF00773} = {D268666A-0584-4B2E-A0E4-30FA8DF564EF}
+		{19EB5530-B182-4AAF-9ECE-363C3F369E3B} = {AF408110-943A-4BFF-8CBF-6162EA31C3FF}
+		{E06D26C3-4291-4DD9-AB5D-7C0F856788F1} = {D268666A-0584-4B2E-A0E4-30FA8DF564EF}
+		{7D1B0230-BDF4-4D68-AE71-63BCC5B6D7F4} = {D268666A-0584-4B2E-A0E4-30FA8DF564EF}
+		{A20D46D1-D458-4C0D-963F-A92687DFF2C8} = {D268666A-0584-4B2E-A0E4-30FA8DF564EF}
+		{35A6E19E-06A8-4346-A484-72A6F1FCB578} = {AF408110-943A-4BFF-8CBF-6162EA31C3FF}
+		{AF408110-943A-4BFF-8CBF-6162EA31C3FF} = {D268666A-0584-4B2E-A0E4-30FA8DF564EF}
+		{0FABCE2C-7F2E-4958-9447-17BE37F3E574} = {88039491-B382-4120-B834-FCA229446145}
+		{D592BF91-9C12-4CD1-99DA-C03D1701D5E8} = {D268666A-0584-4B2E-A0E4-30FA8DF564EF}
+		{898FDE9D-A835-4A2C-BD99-10C1B09F00E3} = {88039491-B382-4120-B834-FCA229446145}
+		{0D6A786E-1191-4D6C-82EA-21404660C5D9} = {88039491-B382-4120-B834-FCA229446145}
+		{3D00885B-4BD0-471A-AAC2-F5CF301D12CE} = {61211A9E-9B43-4D1E-8DDB-5684B3E3234C}
+		{9C940FC4-045A-49F8-89D9-0A5956FE7BB5} = {3D00885B-4BD0-471A-AAC2-F5CF301D12CE}
+		{DE500CDA-68B5-488E-8AC5-5ED3A499BA26} = {9C940FC4-045A-49F8-89D9-0A5956FE7BB5}
+		{AF880828-366B-4137-8704-43BF464126EF} = {9C940FC4-045A-49F8-89D9-0A5956FE7BB5}
+		{644D36EB-074D-4753-9854-72DFEBBFAD1E} = {9C940FC4-045A-49F8-89D9-0A5956FE7BB5}
+		{01625DD4-BF50-44CF-A8F7-A15DB7CE16A4} = {AF880828-366B-4137-8704-43BF464126EF}
+		{8F87D02B-062E-42E6-A5E4-DA038A73F6F3} = {AF880828-366B-4137-8704-43BF464126EF}
+		{0DCB1EF0-2EAA-4A77-AC55-5C00D9CD5F95} = {89849369-B642-4D6F-9086-5468078E9AE9}
+		{BC1AEECE-47BC-4997-94B4-331ED94DA150} = {89849369-B642-4D6F-9086-5468078E9AE9}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2DB553FC-357F-4895-9484-BB4822E9E7C6}
+	EndGlobalSection
+EndGlobal

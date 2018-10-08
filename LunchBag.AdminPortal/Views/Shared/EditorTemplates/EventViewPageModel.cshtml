@@ -1,0 +1,10 @@
+﻿@model string
+<tr>
+    @using (Html.BeginCollectionItem("Views"))
+    {
+        <td>
+            @Html.TextBoxFor(model => model, new { @class = "form-control", required = "required" })
+        </td>
+        <td><span onclick="if (confirm('Delete?')) { $(this).parent().parent().remove(); }" class="glyphicon glyphicon-remove btn btn-danger btn-xs" aria-hidden="true"></span></td>
+    }
+</tr>

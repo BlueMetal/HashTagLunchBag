@@ -1,0 +1,77 @@
+﻿@model HomeViewModel
+    
+<div class="page-header">
+    <h1>Events List</h1>
+</div> 
+<div><input class="btn btn-success pull-right btn-sm" type="button" value="Add Event" data-toggle="modal" data-target="#modalAddEvent" /></div>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Event Name</th>
+            <th scope="col">Locations</th>
+            <th scope="col">Sentiments</th>
+            <th scope="col">Views</th>
+            <th scope="col">Status</th>
+            <th scope="col">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.Events != null)
+        {
+        foreach (var item in Model.Events)
+        {
+        <tr>
+            <th scope="row">@item.Id</th>
+            <td>@item.EventName</td>
+            <td>@item.EventLocations?.Count</td>
+            <td>@item.EventSentiments?.Count</td>
+            <td>@item.EventViews?.Count</td>
+            <td>@(item.IsEventActive ? "Active" : "Inactive")</td>
+            <td><a href="/Home/Edit?eventId=@item.Id" class="glyphicon glyphicon-edit btn btn-info btn-sm" aria-hidden="true"></a> <span onclick="if (confirm('Delete?')) { deleteEvent('@item.Id'); }" class="glyphicon glyphicon-remove btn btn-danger btn-sm" aria-hidden="true"></span></td>
+        </tr>
+        }
+        }
+    </tbody>
+</table>
+
+<div class="modal fade" id="modalAddEvent" tabindex="-1" role="dialog" aria-labelledby="modalAddEventLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalAddEventLabel">New Event</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            @using (Html.BeginForm("AddEvent", "Home", FormMethod.Post, new { id = "formEvent" }))
+            {
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="modal-body">
+
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            @Html.Label("lblEventId", "Event Id", new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.TextBox("Id", "", new { @class = "form-control", required = "required" })
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            @Html.Label("lblEventName", "Event Name", new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.TextBox("EventName", "", new { @class = "form-control", required = "required" })
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="addEvent()">Save changes</button>
+                </div>
+            }
+        </div>
+    </div>
+</div>

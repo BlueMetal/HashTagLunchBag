@@ -1,0 +1,146 @@
+$color-red :#CE4159;
+$box-height:27vh;
+$font2rem:2vh;
+$font4rem:4vh;
+$font5rem:5vh;
+
+$bottom-box-position-from-top: 53vh;
+
+.page_Content {
+    height: 100vh;
+    background-image: radial-gradient(circle, rgba(242,246,247,0.69), rgba(243,246,248, 1) 65% ), url("../../../assets/images/allCitiesbackground.png");
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    overflow: hidden;
+}
+
+.track-giving{
+    position: absolute;
+    left: 5vh;
+    bottom: 5vh;
+}
+
+.map-block{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.carMapCanvas{
+    height: 55vh;
+    width: 65vw;
+    box-shadow: 0 45px 27px -11px rgba(0,0,0,0.5);
+}
+
+.map-box{
+    display: block;
+    height: $box-height;
+    position: absolute;
+    box-shadow:0 30px 27px -15px rgba(0,0,0,.5);
+
+    color: #fff;
+    span { 
+        display:block;
+        position: relative; 
+        color: #fff;
+    }
+}
+.map-box-dc{
+    top:25vh;
+    left: -5vw;
+    width: $box-height;
+    background-color:rgba(0,0,0,0.9);
+}
+
+.map-box-left-image{
+    top: $bottom-box-position-from-top;
+    left: -5vw;
+    width: $box-height;
+    background-color:rgba(0,0,0,0.9);
+}
+
+.map-box-lunchs{
+    top: $bottom-box-position-from-top;
+    left: 11vw;
+    width: $box-height;
+    background-color:rgba(0,0,0,0.9);
+}
+
+.map-box-mid-image{
+    top: $bottom-box-position-from-top;
+    left: 27vw;
+    width: 2 * $box-height;
+    background-color:rgba(0,0,0,0.9);
+}
+
+.map-box-miles{
+    top: $bottom-box-position-from-top;
+    left: 58vw;
+    width: $box-height;
+    background-color:rgba(0,0,0,0.9);
+}
+
+.image-box-image{
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 100%;
+}
+.box-icon{
+    height: 8vh;
+    margin-left: 14vh;
+    margin-top: 2vh;
+    transform: translateX(-50%);
+}
+.box-number{
+    top: 1vh;
+    text-align: center;
+    font-size: 6vh;
+}
+.box-text{
+    top: 2vh;
+    text-align: center;
+    width: 100%;
+    font-size: 2.8vh;
+    font-family: "Segoe WP";
+    font-weight: 400;
+}
+
+.map-nav{
+    display: flex;
+    height: 6vh;
+    width: 1.3 * $box-height;
+    position: absolute;
+    top:45vh;
+    left: 45vw;
+    background-color:rgba(0,0,0,0.8);
+    color:#FFF;
+    text-align: center;
+    vertical-align: middle;
+    line-height:  6vh;
+}
+
+.nav-angle{
+    width: 0.2 * $box-height;
+    font-size: 5vh;
+
+}
+.nav-angle:hover{
+    cursor: pointer;
+    color:#CE4159;
+}
+.nav-angle:active{
+    cursor: pointer;
+    color: #FFF;
+    background-color:#CE4159;
+}
+.display-block{
+    font-family: "Segoe WP";
+    width: 1.1 * $box-height;
+    font-size: 2.5vh;
+    font-weight: 400;
+}
+
+
+
+

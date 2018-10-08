@@ -1,0 +1,444 @@
+@media (min-width: 1079px){
+    .pageContent {
+        height: 100vh;
+        background-image: linear-gradient( 175deg, white, white 55%, rgba(255, 255, 255, 0)), url("../../../assets/images/homeback.jpg");
+        background-size: cover;
+        background-position: top;
+        position: relative;
+        font-family: 'Segoe WP';
+        overflow: hidden;
+    }
+    /*bootstrap styles begin*/
+    .container {
+        max-width: 1140px;
+    }
+
+    .starter-template {
+        padding: 3rem 1.5rem;
+        text-align: center;
+    }
+    .jumbotron {
+        margin-bottom: 2rem;
+        margin-left: 10vw;
+        height: 45vh;
+        width: 50vw;
+        background-color: transparent;
+        border-radius: .3rem;
+    }
+    /* Ends*/
+
+    .logo-block{
+        margin-top: 10vh;
+        align-content: center;
+        height: 15vh;
+    }
+
+    .mslogo {
+        width: 25vw;
+        animation-name: moveToBottomMS;
+        animation-duration: 1s;
+    } 
+  
+    .lunchboxlogo {
+        padding-top:1vh;
+        width: 38vw;
+        animation-name: moveToBottomHTL;
+        animation-duration: 2s;
+    }
+
+    .nav-block-home{
+        bottom:15vh;
+
+    }
+
+    .text-block-box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .lunchboxlogo-mobile {
+        display: none;
+    }
+    
+    .mobile-text-box{
+        display:none;
+    }
+    
+    .mobile-content-ms {
+        display: none;
+    }
+    .donate-mobile-organize{
+        display:none;
+    }
+    
+    .mobile-footer{
+        display:none;
+    }
+
+    .mobile-line{
+        display: none;
+    }
+
+    .mslogo-mobile {
+        display: none;
+    }
+
+    #three-cities{
+        animation-name: fadeInOutText;
+        animation-timing-function: ease-in-out;
+        animation-duration: 3s;
+    }
+    #feeding-thousands{
+        animation-name: fadeInOutText;
+        animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+        animation-duration: 4s;
+    }
+    #one-connected{
+        animation-name: fadeInOutText;
+        animation-timing-function: ease;
+        animation-duration: 5s;
+    }
+    
+    #steps-horizontal{
+        animation-name: fadeInOutText;
+        animation-duration: 7s;
+    }
+
+    .py-5 {
+        padding-top: 7rem!important;
+    }
+
+    @keyframes moveToBottomMS {
+        0% {
+            opacity: 0;
+            transform: translateY(-30%);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    @keyframes moveToBottomHTL {
+        0% {
+            opacity: 0;
+            transform: translateY(-30%);
+        }
+        50% {
+            opacity: 0;
+            transform: translateY(-30%);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    @keyframes fadeInOutText {
+        0% {
+            opacity: 0;
+        }
+        60% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+
+    
+#outer-glow-home{
+    fill-opacity: 0.5;
+    fill: #CE4159;
+    stroke-width: 15px;
+    stroke:#CE4159;
+    stroke-opacity: 1;
+    animation: pulse-dot-home  1s infinite;
+    
+  }
+  
+  @keyframes pulse-dot-home {
+    0% {
+      stroke-width: 0px;
+      stroke-opacity: .9;
+    }
+    20% {
+        stroke-width: 3px;
+        stroke-opacity: 0.8;
+      }
+    40% {
+        stroke-width: 6px;
+        stroke-opacity: .6;
+      }
+    50% {
+      stroke-width: 9px;
+      stroke-opacity: 0.4;
+    }
+    60% {
+        stroke-width: 12px;
+        stroke-opacity: .2;
+      }
+    80% {
+      stroke-width: 15px;
+      stroke-opacity: 0.1;
+    }
+    100% {
+        stroke-width: 18px;
+        stroke-opacity: 0;
+      }
+  }
+}
+/*Styles For Mobile*/  
+@media (min-width: 768px) and (max-width: 1078px) {
+    .pageContent {
+        height: 99vh;
+        background-image: linear-gradient( 165deg, white, white 45%, white 25%, rgba(255, 255, 255, 0)), url("../../../assets/images/homeback.jpg");
+        background-size: cover;
+        background-position: top;
+        position: relative;
+        font-family: 'Segoe WP';
+    }
+
+    /*bootstrap styles begin*/
+    
+    .starter-template {
+        padding: 3rem 1.5rem;
+        text-align: center;
+    }
+    .jumbotron {
+        padding: 4rem 1rem;
+        margin-bottom: 2rem;
+        background-color: transparent;
+        border-radius: .3rem;
+    }
+    /* Ends*/
+    
+    .mslogo-box {
+        position: absolute;
+        top: 10%;
+        left: 30%;
+        transform: translateX(-25%)
+    }
+    
+    .mslogo {
+        height: 53px;
+        animation-name: moveToBottomMS;
+        animation-duration: 3s;
+    } 
+    
+    .mslogo-mobile {
+        display: none;
+    }
+    .lunchboxlogo-box {
+        position: absolute;
+        top: 11%;
+        right: 4%;
+        transform: translateX(25%);
+    }
+    
+    .lunchboxlogo {
+        height: 49px;
+        animation-name: moveToBottomHTL;
+        animation-duration: 6s;
+    }
+    
+    .lunchboxlogo-mobile {
+        display: none;
+    }
+    
+    .mobile-text-box{
+        display:none;
+    }
+    
+    .mobile-content-ms {
+        display: none;
+    }
+    .text-block-box {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .donate-mobile-organize{
+        display:none;
+    }
+    
+    .mobile-footer{
+        display:none;
+    }
+    
+    #three-cities{
+        animation-name: fadeInOutText;
+        animation-timing-function: ease-in-out;
+        animation-duration: 9s;
+    }
+    #feeding-thousands{
+        animation-name: fadeInOutText;
+        animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+        animation-duration: 12s;
+    }
+    #one-connected{
+        animation-name: fadeInOutText;
+        animation-timing-function: ease;
+        animation-duration: 15s;
+    }
+    
+    #steps-horizontal{
+        animation-name: fadeInOutText;
+        animation-duration: 18s;
+    }
+    .mobile-line{
+        display: none;
+    }
+    
+    @keyframes moveToBottomMS {
+        0% {
+            opacity: 0;
+            transform: translateY(-30%);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    @keyframes moveToBottomHTL {
+        0% {
+            opacity: 0;
+            transform: translateY(-30%);
+        }
+        50% {
+            opacity: 0;
+            transform: translateY(-30%);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    @keyframes fadeInOutText {
+        0% {
+            opacity: 0;
+        }
+        60% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    }
+    /* Mobile Phone Devices Styles */
+    @media (min-width: 320px) and (max-width: 767px) {
+        #mobile-content{
+            background: #fff;
+            height:100%;
+            border-style: solid;
+            border-color: #EFEFEF;
+            border-width: 3px thick;
+        }
+    /*Bootstrap Styles*/
+        .jumbotron {
+            display:none;
+        }
+        .starter-template{
+            display: none;
+        }
+        /*Ends Here*/
+        .mslogo-mobile {
+            height: 41px;
+            width: 191px;
+        } 
+        .mslogo-box-mobile {
+            top: 10%;
+            left: 17%;
+            transform: translateX(-25%);
+            padding-left: 50%;
+            padding-top: 15%;
+        }
+        .mslogo {
+            display: none;
+        }  
+         
+        .lunchboxlogo-box-mobile {
+            position: absolute;
+            top: 16%;
+            right: 23%;
+            transform: translateX(25%);
+            margin-top: 13%;
+            padding-right: 16%;
+        }
+    
+        .lunchboxlogo {
+            height: 4vh;
+            display:none;
+        }
+    
+        .lunchboxlogo-mobile{
+            height: 4vh;
+        }
+        
+        .text-block-box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display:none; 
+        }
+    
+        .mobile-text-box{
+            padding-top: 8%;
+            padding-bottom: 8%;
+            padding-left: 7%;
+        }
+    
+        #mobile-header{
+            background-image:url("../../../assets/images/organize-bg.png");
+            height: 193px;
+            border-bottom-left-radius: 30%;
+            border-bottom-right-radius: 30%;
+    
+        }
+    
+        .mobile-content-ms {
+            padding-top: 6%;
+            padding-bottom: 6%;
+            padding-left:7%;
+        }
+    
+        .donate-mobile-organize{
+            text-align: center;
+            padding-bottom: 8%;
+        }
+        
+        #three-cities-mobile{
+            font-size:24px;
+            color:#737373;
+        }
+        
+        #feeding-thousands-mobile{
+            font-size:24px;
+            color:#737373;
+    
+        }
+
+        #connected-experience-mobile{
+            font-size:24px;
+            color:#737373; 
+        }
+
+        #connect-experience{
+            color:#CE4159;
+        }
+
+        #content-mobile{
+            font-size:16px;
+            color:#737373;
+            padding-right: 3%;
+        }  
+        
+    }

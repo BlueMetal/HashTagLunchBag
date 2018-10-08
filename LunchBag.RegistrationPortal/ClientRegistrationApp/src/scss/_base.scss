@@ -1,0 +1,26 @@
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -ms-overflow-style: scrollbar;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+@-ms-viewport {
+  width: device-width;
+}
+body {
+  background-color: #fff;
+  color: #000;
+  font-family: "Segoe UI Web", "Segoe UI", "Roboto", "Helvetica Neue", "Arial",
+    "sans-serif";
+  font-size: 1rem;
+  line-height: 1.4;
+}
+[tabindex="-1"]:focus {
+  outline: 0 !important;
+}
+
+.event-registration {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.32px;
+}

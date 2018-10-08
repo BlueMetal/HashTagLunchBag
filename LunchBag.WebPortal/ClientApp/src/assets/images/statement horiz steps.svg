@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="729px" height="348px" viewBox="0 0 729 348" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>statement</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="TV-1" transform="translate(-594.000000, -288.000000)">
+            <g id="statement" transform="translate(594.000000, 272.000000)">
+                <g id="steps-horizontal" transform="translate(21.000000, 196.000000)">
+                    <polyline id="Path-2" stroke="#CE4159" stroke-width="4" points="0 0 0 90 116 90"></polyline>
+                    <g id="points" transform="translate(66.000000, 54.000000)">
+                        <polyline id="Path-3" stroke="#747474" stroke-width="4" points="84.3714495 34.5 278.936165 34.5 582 34.5"></polyline>
+                        <text id="Prepare" font-family="AmericanSans" font-size="38" font-weight="normal" letter-spacing="0.6412501" fill="#737373">
+                            <tspan x="271" y="104">Prepare</tspan>
+                        </text>
+                        <text id="Give" font-family="AmericanSans" font-size="38" font-weight="normal" letter-spacing="0.6412501" fill="#737373">
+                            <tspan x="567" y="104">Give</tspan>
+                        </text>
+                        <text id="Organize" font-family="AmericanSans" font-size="38" font-weight="normal" letter-spacing="0.6412501" fill="#CE4159">
+                            <tspan x="0" y="104">Organize</tspan>
+                        </text>
+                        <circle id="Oval" stroke="#737373" stroke-width="4" fill="#F2F5F7" cx="339.5" cy="34.5" r="26.5"></circle>
+                        <circle id="Oval-Copy-2" stroke="#747474" stroke-width="4" fill="#F2F5F7" cx="604.5" cy="34.5" r="26.5"></circle>
+                        <circle id="Oval-Copy-3" fill-opacity="0.437415082" fill="#CE4159" cx="75.5" cy="34.5" r="34.5"></circle>
+                        <circle id="Oval-Copy" stroke="#CE4159" stroke-width="4" fill="#CE4159" cx="75.5" cy="34.5" r="26.5"></circle>
+                    </g>
+                </g>
+                <g id="connected-experience-text">
+                    <text id="Three-cities." font-family="SegoeWP, Segoe WP" font-size="48" font-weight="normal" letter-spacing="1.111579" fill="#737373">
+                        <tspan x="0" y="52">Three cities.</tspan>
+                    </text>
+                    <text id="Feeding-thousands-of" font-family="SegoeWP, Segoe WP" font-size="48" font-weight="normal" letter-spacing="1.111579" fill="#737373">
+                        <tspan x="0" y="119">Feeding thousands of people.</tspan>
+                    </text>
+                    <text id="One-Connected-Experi" font-family="SegoeWP-Semibold, Segoe WP" font-size="57" font-weight="500" letter-spacing="1.319999">
+                        <tspan x="0" y="198" fill="#CE4159">One </tspan>
+                        <tspan x="124.707242" y="198" letter-spacing="0.9524041" fill="#747474">Connected Experience.</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

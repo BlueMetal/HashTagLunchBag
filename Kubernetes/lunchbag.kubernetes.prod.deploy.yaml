@@ -1,0 +1,324 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: abi-rabbit
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: abi-rabbit
+    spec:
+      containers:
+      - name: abi-rabbit
+        image: rabbitmq:3-management
+        ports:
+        - containerPort: 5672
+          name: abi-rabbit
+        - containerPort: 15672
+          name: management
+        env:
+        - name: RABBITMQ_DEFAULT_USER
+          valueFrom:
+            secretKeyRef:
+              name: rabbitmq-credentials
+              key: Username
+        - name: RABBITMQ_DEFAULT_PASS
+          valueFrom:
+            secretKeyRef:
+              name: rabbitmq-credentials
+              key: Password
+---
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: lunchbagwebportal
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: lunchbagwebportal
+    spec:
+      containers:
+      - name: lunchbagwebportal
+        image: lunchbagregistry.azurecr.io/lunchbagwebportal:20180531101843
+        volumeMounts:
+          - name: config
+            mountPath: /app/config
+            readOnly: true 
+          - name: secrets
+            mountPath: /app/secrets
+            readOnly: true
+        ports:
+        - containerPort: 80
+          name: webportal
+      volumes:
+      - name: config
+        configMap:
+          name: config-lunchbagwebportal
+      - name: secrets
+        secret:
+          secretName: secrets-common
+      imagePullSecrets:
+      - name: acr-authentication
+---
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: lunchbagregistrationportal
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: lunchbagregistrationportal
+    spec:
+      containers:
+      - name: lunchbagregistrationportal
+        image: lunchbagregistry.azurecr.io/lunchbagregistrationportal:20180608062538
+        volumeMounts:
+          - name: config
+            mountPath: /app/config
+            readOnly: true 
+          - name: secrets
+            mountPath: /app/secrets
+            readOnly: true
+        ports:
+        - containerPort: 80
+          name: regportal
+      volumes:
+      - name: config
+        configMap:
+          name: config-lunchbagregistrationportal
+      - name: secrets
+        secret:
+          secretName: secrets-common
+      imagePullSecrets:
+      - name: acr-authentication
+---
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: lunchbagadminportal
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: lunchbagadminportal
+    spec:
+      containers:
+      - name: lunchbagadminportal
+        image: lunchbagregistry.azurecr.io/lunchbagadminportal:20180608062538
+        volumeMounts:
+          - name: config
+            mountPath: /app/config
+            readOnly: true 
+          - name: secrets
+            mountPath: /app/secrets
+            readOnly: true
+        ports:
+        - containerPort: 80
+          name: adminportal
+      volumes:
+      - name: config
+        configMap:
+          name: config-lunchbagadminportal
+      - name: secrets
+        secret:
+          secretName: secrets-common
+      imagePullSecrets:
+      - name: acr-authentication
+---
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: lunchbagregistrationportalapi
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: lunchbagregistrationportalapi
+    spec:
+      containers:
+      - name: lunchbagregistrationportalapi
+        image: lunchbagregistry.azurecr.io/lunchbagregistrationportalapi:20180611084953
+        volumeMounts:
+          - name: config
+            mountPath: /app/config
+            readOnly: true 
+          - name: secrets
+            mountPath: /app/secrets
+            readOnly: true
+        ports:
+        - containerPort: 80
+          name: regportalapi
+      volumes:
+      - name: config
+        configMap:
+          name: config-lunchbagregistrationportalapi
+      - name: secrets
+        secret:
+          secretName: secrets-common
+      imagePullSecrets:
+      - name: acr-authentication
+---      
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: lunchbagwebportalapi
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: lunchbagwebportalapi
+    spec:
+      containers:
+      - name: lunchbagwebportalapi
+        image: lunchbagregistry.azurecr.io/lunchbagwebportalapi:20180614090413
+        volumeMounts:
+          - name: config
+            mountPath: /app/config
+            readOnly: true 
+          - name: secrets
+            mountPath: /app/secrets
+            readOnly: true
+        ports:
+        - containerPort: 80
+          name: webportalapi
+      volumes:
+      - name: config
+        configMap:
+          name: config-lunchbagwebportalapi
+      - name: secrets
+        secret:
+          secretName: secrets-common
+      imagePullSecrets:
+      - name: acr-authentication
+---      
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: lunchbagwebportalmessageservice
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: lunchbagwebportalmessageservice
+    spec:
+      containers:
+      - name: lunchbagwebportalmessageservice
+        image: lunchbagregistry.azurecr.io/lunchbagwebportalmessageservice:20180614091625
+        volumeMounts:
+          - name: config
+            mountPath: /app/config
+            readOnly: true 
+          - name: secrets
+            mountPath: /app/secrets
+            readOnly: true
+      volumes:
+      - name: config
+        configMap:
+          name: config-lunchbagwebportalmessageservice
+      - name: secrets
+        secret:
+          secretName: secrets-common
+      imagePullSecrets:
+      - name: acr-authentication
+---      
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: lunchbagwebportalbuttonservice
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: lunchbagwebportalbuttonservice
+    spec:
+      containers:
+      - name: lunchbagwebportalbuttonservice
+        image: lunchbagregistry.azurecr.io/lunchbagwebportalbuttonservice:20180614091111
+        volumeMounts:
+          - name: config
+            mountPath: /app/config
+            readOnly: true 
+          - name: secrets
+            mountPath: /app/secrets
+            readOnly: true
+      volumes:
+      - name: config
+        configMap:
+          name: config-lunchbagwebportalbuttonservice
+      - name: secrets
+        secret:
+          secretName: secrets-common
+      imagePullSecrets:
+      - name: acr-authentication
+---      
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: lunchbagwebportalbusservice
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: lunchbagwebportalbusservice
+    spec:
+      containers:
+      - name: lunchbagwebportalbusservice
+        image: lunchbagregistry.azurecr.io/lunchbagwebportalbusservice:20180614090804
+        volumeMounts:
+          - name: config
+            mountPath: /app/config
+            readOnly: true 
+          - name: secrets
+            mountPath: /app/secrets
+            readOnly: true
+      volumes:
+      - name: config
+        configMap:
+          name: config-lunchbagwebportalbusservice
+      - name: secrets
+        secret:
+          secretName: secrets-common
+      imagePullSecrets:
+      - name: acr-authentication
+---      
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: lunchbagwebportaltransportservice
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: lunchbagwebportaltransportservice
+    spec:
+      containers:
+      - name: lunchbagwebportaltransportservice
+        image: lunchbagregistry.azurecr.io/lunchbagwebportaltransportservice:20180614090804
+        volumeMounts:
+          - name: config
+            mountPath: /app/config
+            readOnly: true 
+          - name: secrets
+            mountPath: /app/secrets
+            readOnly: true
+      volumes:
+      - name: config
+        configMap:
+          name: config-lunchbagwebportaltransportservice
+      - name: secrets
+        secret:
+          secretName: secrets-common
+      imagePullSecrets:
+      - name: acr-authentication

@@ -1,0 +1,4 @@
+<div class="arrow-nav-block">
+  <img [ngClass]="upArrowRoutePath === '' ? 'nav-image-disabled' : 'nav-image'" (click)="handleUpClick()" src="../../../assets/icons/up-arrow.svg"/>
+  <img [ngClass]="downArrowRoutePath === '' ? 'nav-image-disabled' : 'nav-image'" (click)="handleDownClick()" src="../../../assets/icons/down-arrow.svg"/>
+</div>

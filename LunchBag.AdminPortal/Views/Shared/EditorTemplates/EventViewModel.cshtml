@@ -1,0 +1,24 @@
+﻿@model LunchBag.Common.Models.EventViewModel
+
+<tr>
+    @using (Html.BeginCollectionItem("EventViews"))
+    {
+        <th scope="row">@Html.EditorFor(model => model.ViewId, new { htmlAttributes = new { @class = "form-control", required = "required" } })</th>
+        <td>
+            <table class="table table-bordered">
+                <tbody>
+                    @if (Model.Views != null)
+                    {
+                        @for (var i = 0; i < Model.Views.Count; i++)
+                        {
+                            @Html.EditorFor(model => Model.Views[i], "EventViewPageModel", new { htmlAttributes = new { @class = "form-control" } })
+                        }
+                    }
+                </tbody>
+            </table>
+            <input class="btn btn-success btn-xs pull-right" style="margin-top:-15px" type="button" onclick="addPage(this)" value="Add Page" />
+        </td>
+        <td>@Html.EditorFor(model => model.CyclingInterval, new { htmlAttributes = new { @class = "form-control", required = "required" } })</td>
+        <td><span onclick="if (confirm('Delete?')) { $(this).parent().parent().remove(); }" class="glyphicon glyphicon-remove btn btn-danger btn-sm" aria-hidden="true"></span></td>
+    }
+</tr>

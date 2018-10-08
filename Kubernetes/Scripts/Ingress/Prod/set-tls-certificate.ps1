@@ -1,0 +1,1 @@
+kubectl create secret generic tls-secret-prod --from-file=./tls.crt --from-file=./tls.key

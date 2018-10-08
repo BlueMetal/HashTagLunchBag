@@ -1,0 +1,23 @@
+﻿@model LunchBag.Common.Models.Transport.DeliveryModel
+@{
+    var locations = ((IEnumerable<SelectListItem>)ViewData["locations"]);
+}
+<tr>
+    @using (Html.BeginCollectionItem("Deliveries.Deliveries"))
+    {
+        var id = $"{Model.VehicleName} - {Model.DriverName}";
+        var locationName = locations?.FirstOrDefault(p => p.Value == Model.LocationId)?.Text;
+        var status = Model.Status == 2 ? "Arrived" : Model.Status == 1 ? "In Progress" : "Not started";
+        <th>@Html.DisplayFor(model => id)</th>
+        <td>@Html.DisplayFor(model => locationName)</td>
+        <td>@Html.DisplayFor(model => model.Destination)</td>
+        <td>@Html.DisplayFor(model => model.LunchCount)</td>
+        <td>@Html.DisplayFor(model => status)</td>
+        <td>
+            @if (Model.Status != 1)
+            {
+                <span onclick="if (confirm('Delete?')) { deleteDelivery(this, '@Model.EventId', '@Model.DeliveryId'); }" class="glyphicon glyphicon-remove btn btn-danger btn-sm" aria-hidden="true"></span>
+            }
+        </td>
+    }
+</tr>

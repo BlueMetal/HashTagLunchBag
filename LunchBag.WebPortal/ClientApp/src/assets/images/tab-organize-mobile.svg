@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="375px" height="64px" viewBox="0 0 375 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>tab</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="mobile" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Mobile---Organize" transform="translate(0.000000, -603.000000)">
+            <g id="tab" transform="translate(0.000000, 603.000000)">
+                <g id="-tab-bg" opacity="0.891629464" transform="translate(0.000000, 18.000000)" fill="#FFFFFF">
+                    <g id="pieces">
+                        <rect id="Rectangle" x="0" y="0" width="125" height="46"></rect>
+                        <rect id="Rectangle-Copy" x="125" y="0" width="125" height="46"></rect>
+                        <rect id="Rectangle-Copy-2" x="250" y="0" width="125" height="46"></rect>
+                    </g>
+                    <rect id="Rectangle-3" x="0" y="0" width="375" height="46"></rect>
+                </g>
+                <g id="active-tab-bg" transform="translate(11.000000, 0.000000)" fill="#CE4159">
+                    <circle id="glow" fill-opacity="0.34" cx="52" cy="52" r="52"></circle>
+                    <circle id="inner-oval" cx="52" cy="52" r="45"></circle>
+                </g>
+                <text id="Organize" font-family=".AppleSystemUIFont" font-size="18" font-weight="normal" fill="#FFFFFF">
+                    <tspan x="27" y="46">Organize</tspan>
+                </text>
+                <text id="Prepare" font-family=".AppleSystemUIFont" font-size="16" font-weight="normal" fill="#2FACC0">
+                    <tspan x="160" y="45">Prepare</tspan>
+                </text>
+                <text id="Give" font-family=".AppleSystemUIFont" font-size="16" font-weight="normal" fill="#2FACC0">
+                    <tspan x="297" y="45">Give</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

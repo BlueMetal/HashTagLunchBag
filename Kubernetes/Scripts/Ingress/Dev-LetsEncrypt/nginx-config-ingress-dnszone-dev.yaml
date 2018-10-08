@@ -1,0 +1,41 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: lunchbag
+  namespace: default
+  annotations:
+    kubernetes.io/ingress.class: "addon-http-application-routing"
+    #kubernetes.io/tls-acme: "true"
+    #ingress.kubernetes.io/ssl-redirect: "true"
+    #nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+#  tls:
+#  - hosts:  
+#    - lunchbagwebportal.d7969172-5d9b-4c11-8fb3-9d4acc1772f5.eastus.aksapp.io
+#    secretName: tls-secret-lunchbagwebportal
+#  - hosts:
+#    - lunchbagregistrationportal.d7969172-5d9b-4c11-8fb3-9d4acc1772f5.eastus.aksapp.io
+#    secretName: tls-secret-lunchbagregistrationportal
+  rules:
+  - host: lunchbagwebportal.d7969172-5d9b-4c11-8fb3-9d4acc1772f5.eastus.aksapp.io
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: lunchbagwebportal
+          servicePort: 80
+      - path: /api
+        backend:
+          serviceName: lunchbagwebportalapi
+          servicePort: 80
+  - host: lunchbagregistrationportal.d7969172-5d9b-4c11-8fb3-9d4acc1772f5.eastus.aksapp.io
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: lunchbagregistrationportal
+          servicePort: 80
+      - path: /api
+        backend:
+          serviceName: lunchbagregistrationportalapi
+          servicePort: 80

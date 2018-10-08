@@ -1,0 +1,8 @@
+{
+    "/api/*": {
+      "target": "https://donate.ready.gives",
+      "secure": false,
+      "logLevel": "debug",
+      "changeOrigin": true
+    }
+  }

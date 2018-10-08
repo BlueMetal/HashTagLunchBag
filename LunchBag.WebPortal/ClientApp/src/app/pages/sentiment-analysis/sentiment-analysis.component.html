@@ -1,0 +1,62 @@
+<div class="page_Content">
+    <div class="row logo-box">
+        <div class="col-2 mslogo-city">
+            <img src="../../../assets/logos/microsoft/microsoft-logo.svg" alt="Microsoft Logo" class="mslogo-city">
+        </div>
+        <div class="col-3">
+            <img src="../../../assets/logos/hashtag/hashtaglunchbag-logo-gray.svg" alt="Microsoft Logo" class="lunchboxlogocity">
+        </div>
+        <div class="col-7"></div>
+    </div>
+
+    <div class="track-giving"> <track-giving></track-giving></div>
+    <div class="row">
+        <div class="col-3">
+            <div class="stepHolder">
+                <give-svg></give-svg>
+            </div>
+        </div>
+        <!--Map Status -->
+        <div class="col-8 sentiment-block">
+            <div class="page-title">
+                Love Notes Sentiment Analysis
+            </div>
+            <div class="title-block">
+                <span class="now-text"> <img class="pencil" src="../../../assets/icons/pencil.svg" />Now </span>
+                <span class="main-text" [innerHTML]= "getLastNote()"></span>
+            </div>
+
+            <div class="sa-box sa-box-hope">
+                <span class="icon-text"> <img class="graph-icon" src="../../../assets/icons/graph-icon.png" />Hope </span>
+                <span class="percent-text">{{getSentimentPercentage("hope")}}</span>
+            </div>
+
+            <div class="sa-box sa-box-mid-image">
+                    <img class="image-box-image" src="../../../assets/images/man-writing.jpg" />
+            </div>
+
+            <div class="sa-box sa-box-care">
+                    <span class="icon-text"> <img class="graph-icon" src="../../../assets/icons/graph-icon.png" />Care </span>
+                    <span class="percent-text">{{getSentimentPercentage("care")}}</span>
+            </div>
+
+            
+            <div class="sa-box sa-box-left-image">
+                    <img class="image-box-image" src="../../../assets/images/girl-writing.jpg" />
+            </div>
+            <div class="sa-box sa-box-love">
+                    <span class="icon-text"> <img class="graph-icon" src="../../../assets/icons/graph-icon.png" />Love </span>
+                    <span class="percent-text">{{getSentimentPercentage("love")}}</span>
+            </div>
+            <div class="sa-box sa-box-right-image">
+                    <img class="image-box-image" src="../../../assets/images/have-hope-bags.jpg" />
+            </div>
+        </div>
+
+        <div class="col-1">
+                <nav-arrow [upArrowRoutePath]="'give'"></nav-arrow>
+            </div>
+
+    </div>
+
+</div>

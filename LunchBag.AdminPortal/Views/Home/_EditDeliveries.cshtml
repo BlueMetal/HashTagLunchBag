@@ -1,0 +1,80 @@
+﻿@model EventDeliveryViewModel
+<div class="form-horizontal">
+    <div><input class="btn btn-success pull-right btn-sm" type="button" value="Add Delivery" data-toggle="modal" data-target="#modalAddDelivery" />
+         <a class="btn btn-info pull-left btn-sm" target="_blank" href="@Model.LinkMobiliyaPortal">Manage the fleet</a>
+    </div>
+    <table id="gridDeliveries" class="table table-striped">
+        <thead>
+            <tr>
+                <th>Driver</th>
+                <th>Location</th>
+                <th>Address</th>
+                <th>Nbr. Lunches</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model.Deliveries != null)
+            {
+                @Html.EditorFor(model => model.Deliveries, new { locations = Model.Locations })
+            }
+        </tbody>
+    </table>
+</div>
+
+@if (Model.Deliveries != null && Model.Drivers != null && Model.Locations != null)
+{
+<div class="modal fade" id="modalAddDelivery" tabindex="-1" role="dialog" aria-labelledby="modalAddDeliveryLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalAddDeliveryLabel">New Delivery</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            @using (Html.BeginForm("AddDelivery", "Home", FormMethod.Post, new { id = "formEvent" }))
+            {
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                @Html.HiddenFor(model => model.EventId)
+                <div class="modal-body">
+
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Drivers, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.DropDownList("DriverId", Model.Drivers, "Select Driver", new { @class = "form-control", required = "required" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Locations, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.DropDownList("LocationId", Model.Locations, "Select Location", new { @class = "form-control", required = "required" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            @Html.Label("lblDestination", "Address", new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.TextBox("Destination", "", new { @class = "form-control", required = "required" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            @Html.Label("lblLunches", "Nbr. Lunches", new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.TextBox("LunchCount", "1", new { type = "number", min = "1", @class = "form-control", required = "required" })
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="addDelivery()">Save changes</button>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+}

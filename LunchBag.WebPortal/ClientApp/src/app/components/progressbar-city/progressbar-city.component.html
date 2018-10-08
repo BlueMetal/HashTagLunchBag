@@ -1,0 +1,16 @@
+<div class="pbar-title">
+    {{eventLocationInfo.locationName}}
+
+</div>
+<div class="pbar-flex-continer">
+    <div class="image-box-city" (click)="addHeart()">
+        <img class="image-box-image" [src]="getImagePath()" />
+        <div *ngFor="let h of heartArray">
+            <div class="heart-icon"><heart-icon [moveToDir]="this.pBarPosition"></heart-icon></div>   
+        </div>
+    </div>
+    <div class="pbar-back"></div>
+    <div class="pbar-front" [ngStyle]="{'height': getRemainingGoalHeight()}"></div>
+    <div class="pbar-percent">{{this.eventLocationInfo.goalStatus}} <br/>Lunches</div>
+  
+</div>

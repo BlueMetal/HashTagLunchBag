@@ -1,0 +1,75 @@
+<div class="page_Content">
+    <div class="row logo-box">
+        <div class="col-2 mslogo-city">
+            <img src="../../../assets/logos/microsoft/microsoft-logo.svg" alt="Microsoft Logo" class="mslogo-city">
+        </div>
+        <div class="col-3">
+            <img src="../../../assets/logos/hashtag/hashtaglunchbag-logo-gray.svg" alt="Microsoft Logo" class="lunchboxlogocity">
+        </div>
+        <div class="col-7"></div>
+    </div>
+
+    <div class="track-giving">
+        <track-giving></track-giving>
+    </div>
+    <div class="row">
+        <div class="col-3">
+            <div class="stepHolder">
+                <give-svg></give-svg>
+            </div>
+        </div>
+        <!--Map Status -->
+
+        <div class="col-8 map-block">
+            <div class="page-title">
+                Lunchbag Delivery
+            </div>
+            <div class="carMapCanvas">
+                <car-bing-map [deliveryCarInfoArr]="this.getMapData()"></car-bing-map>
+            </div>
+            <div class="map-box map-box-dc">
+                <img class="box-icon" [src]="this.deliveryCarStatusBox.icon" />
+                <span class="box-number">{{this.deliveryCarStatusBox.milesToDestValue}}</span>
+                <span class="box-text">{{this.deliveryCarStatusBox.milesToDestText}}</span>
+
+            </div>
+
+            <div class="map-box map-box-left-image">
+                <img class="image-box-image" src="../../../assets/images/man-girl-sign.jpg" />
+            </div>
+
+            <div class="map-box map-box-lunchs">
+                <img class="box-icon" src="../../../assets/icons/lunchbag-icon.svg" />
+                <span class="box-number">{{ this.deliveryCarStatusBox.lunchMade}}</span>
+                <span class="box-text">LUNCHES</span>
+            </div>
+
+            <div class="map-box map-box-mid-image">
+                <img class="image-box-image" src="../../../assets/images/girls-backpacks.jpg" />
+            </div>
+            <div class="map-box map-box-miles">
+                <img class="box-icon" src="../../../assets/icons/miles-traveled.svg" />
+                <span class="box-number">{{this.deliveryCarStatusBox.milesTravled}}</span>
+                <span class="box-text">MILES TRAVELED</span>
+            </div>
+            <div class="map-nav">
+                <div class="nav-angle">
+                    <fa name="angle-left" (click)="handleLeftAngleClick()"></fa>
+                </div>
+                <div class="display-block">{{ this.deliveryCarStatusBox.navigationButtonText}}</div>
+                <div class="nav-angle">
+                    <fa name="angle-right" (click)="handleRightAngleClick()"></fa>
+                </div>
+
+                <!-- <span><fa name="angle-left" class="nav-left-angle" (click)="handleLeftAngleClick()"></fa> {{this.navButtonTitle}} <fa name="angle-right" class="nav-right-angle" (click)="handleRightAngleClick()"></fa></span> -->
+
+            </div>
+
+        </div>
+        <div class="col-1">
+            <nav-arrow [upArrowRoutePath]="'prepare'" [downArrowRoutePath]="'sentiment'"></nav-arrow>
+        </div>
+
+    </div>
+
+</div>

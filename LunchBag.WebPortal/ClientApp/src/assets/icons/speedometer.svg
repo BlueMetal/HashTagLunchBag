@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="61px" height="61px" viewBox="0 0 61 61" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>speedometer</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="TV-Main-Copy-3" transform="translate(-598.000000, -600.000000)">
+            <g id="los-angeles-copy" transform="translate(477.000000, -45.000000)">
+                <g id="metrics-view-2" transform="translate(34.000000, 443.000000)">
+                    <g id="metric-2" transform="translate(0.000000, 187.000000)">
+                        <g id="speedometer" transform="translate(87.000000, 15.000000)">
+                            <path d="M18.3248673,15.3616671 C14.0401628,19.279471 11.5,24.8514413 11.5,30.8578979 C11.5,35.1728803 12.8057548,39.2801099 15.1721391,42.7265626 L18.3248684,15.3616625 Z" id="Oval-5" stroke="#2FACC0" stroke-width="3"></path>
+                            <path d="M49.3248673,15.3616671 C45.0401628,19.279471 42.5,24.8514413 42.5,30.8578979 C42.5,35.1728803 43.8057548,39.2801099 46.1721391,42.7265626 L49.3248684,15.3616625 Z" id="Oval-5-Copy" stroke="#CE4159" stroke-width="3" transform="translate(46.111045, 29.213188) scale(-1, 1) translate(-46.111045, -29.213188) "></path>
+                            <circle id="Oval-2" stroke="#FFFFFF" stroke-width="3" cx="30.5" cy="30.5" r="29"></circle>
+                            <circle id="Oval-4" stroke="#FFFFFF" stroke-width="2" cx="30.5" cy="30.5" r="5.5"></circle>
+                            <path d="M30.5,24.5 L30.5,9.46670362" id="Line-3" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

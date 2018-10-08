@@ -1,0 +1,62 @@
+﻿@model LunchBag.Common.Models.EventModel
+
+<div class="page-header">
+    <h1>@Model.EventName</h1>
+</div>
+<div>
+    <ul id="tabsMenu" class="nav nav-tabs" role="tablist">
+        <li class="active"><a id="menuTabEditEvent" href="#tabEditEvent" role="tab" data-toggle="tab" data-controller-action="EditEvent">Event Settings</a></li>
+        <li><a id="menuTabEditLocations" href="#tabEditLocations" role="tab" data-toggle="tab" data-controller-action="EditLocations">Locations Settings</a></li>
+        <li><a id="menuTabEditSentiments" href="#tabEditSentiments" role="tab" data-toggle="tab" data-controller-action="EditSentiments">Sentiments Settings</a></li>
+        <li><a id="menuTabEditViews" href="#tabEditViews" role="tab" data-toggle="tab" data-controller-action="EditViews">Views Settings</a></li>
+        <li><a id="menuTabEditNotes" href="#tabEditNotes" role="tab" data-toggle="tab" data-controller-action="EditNotes">Notes Settings</a></li>
+        <li><a id="menuTabEditDeliveries" href="#tabEditDeliveries" role="tab" data-toggle="tab" data-controller-action="EditDeliveries">Deliveries Settings</a></li>
+        <li><a id="menuTabEditPayPal" href="#tabEditPayPal" role="tab" data-toggle="tab" data-controller-action="EditPayPal">PayPal Settings</a></li>
+        <!--<li><a id="menuTabManageDevices" href="#tabManageDevices" role="tab" data-toggle="tab" data-controller-action="ManageDevices">Manage Devices</a></li>-->
+    </ul>
+
+    <div class="tab-content">
+        <div class="tab-pane fade active in" id="tabEditEvent">
+            @await Html.PartialAsync("_EditEvent", new EventGeneralSettingsViewModel { EventId = Model.Id, EventName = Model.EventName, IsEventActive = Model.IsEventActive })
+        </div>
+        <div class="tab-pane fade" id="tabEditLocations"></div>
+        <div class="tab-pane fade" id="tabEditSentiments"></div>
+        <div class="tab-pane fade" id="tabEditViews"></div>
+        <div class="tab-pane fade" id="tabEditNotes"></div>
+        <div class="tab-pane fade" id="tabEditDeliveries"></div>
+        <div class="tab-pane fade" id="tabEditPayPal"></div>
+        <!--<div class="tab-pane fade" id="tabManageDevices"></div>-->
+    </div>
+</div>
+
+<div class="pull-right" style="padding-top:20px">
+    @Html.ActionLink("Return to list of events", "Index", "Home", null, null)
+</div>
+
+@section Scripts {
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#tabsMenu a').on("click", function (e) {
+                e.preventDefault();
+                var tabID = $(this).attr("href").substr(1);
+                var action = $(this).data("controller-action");
+                var eventId = "@Model.Id";
+                $(".tab-pane").each(function () {
+                    $(this).html("<img src='/images/waiting.gif'/>");
+                });
+                $.ajax({
+                    url: "/Home/" + action + "?eventId=" + eventId,
+                    cache: false,
+                    type: "get",
+                    dataType: "html",
+                    success: function (result) {
+                        $("#" + tabID).html(result);
+                        $("#formEvent").validate();
+                        processLocationLimits();
+                    }
+                });
+                $(this).tab('show')
+            });
+        });
+    </script>
+}

@@ -1,0 +1,65 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2018
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ms.IoT.LunchBag.Camera", "Ms.IoT.LunchBag.Camera\Ms.IoT.LunchBag.Camera.csproj", "{00D1219F-0A57-43E5-85EA-A4F3B5F8AE33}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LunchBag.Camera.Command", "Tools\LunchBag.Camera.Command\LunchBag.Camera.Command.csproj", "{88A8402F-C147-4D73-A798-7AA4942924FE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|ARM = Debug|ARM
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|ARM = Release|ARM
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{00D1219F-0A57-43E5-85EA-A4F3B5F8AE33}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{00D1219F-0A57-43E5-85EA-A4F3B5F8AE33}.Debug|ARM.ActiveCfg = Debug|ARM
+		{00D1219F-0A57-43E5-85EA-A4F3B5F8AE33}.Debug|ARM.Build.0 = Debug|ARM
+		{00D1219F-0A57-43E5-85EA-A4F3B5F8AE33}.Debug|ARM.Deploy.0 = Debug|ARM
+		{00D1219F-0A57-43E5-85EA-A4F3B5F8AE33}.Debug|x64.ActiveCfg = Debug|x64
+		{00D1219F-0A57-43E5-85EA-A4F3B5F8AE33}.Debug|x64.Build.0 = Debug|x64
+		{00D1219F-0A57-43E5-85EA-A4F3B5F8AE33}.Debug|x64.Deploy.0 = Debug|x64
+		{00D1219F-0A57-43E5-85EA-A4F3B5F8AE33}.Debug|x86.ActiveCfg = Debug|x86
+		{00D1219F-0A57-43E5-85EA-A4F3B5F8AE33}.Debug|x86.Build.0 = Debug|x86
+		{00D1219F-0A57-43E5-85EA-A4F3B5F8AE33}.Debug|x86.Deploy.0 = Debug|x86
+		{00D1219F-0A57-43E5-85EA-A4F3B5F8AE33}.Release|Any CPU.ActiveCfg = Release|x86
+		{00D1219F-0A57-43E5-85EA-A4F3B5F8AE33}.Release|ARM.ActiveCfg = Release|ARM
+		{00D1219F-0A57-43E5-85EA-A4F3B5F8AE33}.Release|ARM.Build.0 = Release|ARM
+		{00D1219F-0A57-43E5-85EA-A4F3B5F8AE33}.Release|ARM.Deploy.0 = Release|ARM
+		{00D1219F-0A57-43E5-85EA-A4F3B5F8AE33}.Release|x64.ActiveCfg = Release|x64
+		{00D1219F-0A57-43E5-85EA-A4F3B5F8AE33}.Release|x64.Build.0 = Release|x64
+		{00D1219F-0A57-43E5-85EA-A4F3B5F8AE33}.Release|x64.Deploy.0 = Release|x64
+		{00D1219F-0A57-43E5-85EA-A4F3B5F8AE33}.Release|x86.ActiveCfg = Release|x86
+		{00D1219F-0A57-43E5-85EA-A4F3B5F8AE33}.Release|x86.Build.0 = Release|x86
+		{00D1219F-0A57-43E5-85EA-A4F3B5F8AE33}.Release|x86.Deploy.0 = Release|x86
+		{88A8402F-C147-4D73-A798-7AA4942924FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88A8402F-C147-4D73-A798-7AA4942924FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88A8402F-C147-4D73-A798-7AA4942924FE}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{88A8402F-C147-4D73-A798-7AA4942924FE}.Debug|ARM.Build.0 = Debug|Any CPU
+		{88A8402F-C147-4D73-A798-7AA4942924FE}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{88A8402F-C147-4D73-A798-7AA4942924FE}.Debug|x64.Build.0 = Debug|Any CPU
+		{88A8402F-C147-4D73-A798-7AA4942924FE}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{88A8402F-C147-4D73-A798-7AA4942924FE}.Debug|x86.Build.0 = Debug|Any CPU
+		{88A8402F-C147-4D73-A798-7AA4942924FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88A8402F-C147-4D73-A798-7AA4942924FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88A8402F-C147-4D73-A798-7AA4942924FE}.Release|ARM.ActiveCfg = Release|Any CPU
+		{88A8402F-C147-4D73-A798-7AA4942924FE}.Release|ARM.Build.0 = Release|Any CPU
+		{88A8402F-C147-4D73-A798-7AA4942924FE}.Release|x64.ActiveCfg = Release|Any CPU
+		{88A8402F-C147-4D73-A798-7AA4942924FE}.Release|x64.Build.0 = Release|Any CPU
+		{88A8402F-C147-4D73-A798-7AA4942924FE}.Release|x86.ActiveCfg = Release|Any CPU
+		{88A8402F-C147-4D73-A798-7AA4942924FE}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E9D88895-3D21-4AE8-9768-2C48710FB693}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,80 @@
+$backColor:#CE4159;
+$frontColor:#35C7DE;
+
+// $pbarContainerHeight:410px;
+// $pbarContainerWidth:550px;
+// $imageBoxWidht:440px;
+// $titleHeight: 100px;
+// $pbarWidth:110px;
+
+$pbarContainerHeight:100%;
+$pbarContainerWidth:100%;
+$titleHeight: 20%;
+$pbarWidth:25%;
+
+$imageBoxHeight: ($pbarContainerHeight - $titleHeight);
+$imageBoxWidth:($pbarContainerWidth - $pbarWidth);
+
+
+.pbar-flex-continer{
+    display: flex;
+    flex-direction: row;
+    height: $pbarContainerHeight;
+    width:$pbarContainerWidth;
+    position: relative;
+
+}
+.pbar-title{
+    height: $titleHeight;
+    width: $pbarContainerWidth;
+    font-family: 'Segoe WP';
+    font-size: 5vh;
+    font-weight: 300;
+    text-align: center;
+    color: #CE4159;
+}
+.image-box-city{
+    background: gray;
+    height: $imageBoxHeight;
+    width: $imageBoxWidth;
+}
+.image-box-image{
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 100%;
+    min-height: 100%;
+}
+
+.heart-icon{
+    position: absolute;
+    top: 10px;
+    left:50px;
+}
+
+.pbar-back{
+    height: $imageBoxHeight;
+    width: $pbarWidth;
+    background:$backColor;
+
+}
+
+.pbar-front{
+    position: absolute;
+    height: 20%;
+    width: $pbarWidth;
+    background: $frontColor;
+    right: 0;
+}
+
+.pbar-percent{
+    position: absolute;
+    top: 30%;
+    left: 75%;
+    height: 5vh;
+    width: 25%;
+    text-align: center;
+    line-height: 3vh;
+    font-size: 3vh;
+    font-weight: 600;
+    color: #ffffff;
+}

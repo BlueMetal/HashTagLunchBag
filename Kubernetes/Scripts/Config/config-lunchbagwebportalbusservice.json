@@ -1,0 +1,17 @@
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Warning"
+    }
+  },
+  "AzureAd": {
+    "Instance": "https://login.microsoftonline.com/"
+  },
+  "ServiceBus": {
+    "Uri": "rabbitmq://abi-rabbit",
+  },
+  "RestService": {
+    "RestServiceUrl": "http://lunchbagwebportalapi.default.svc.cluster.local"
+  },
+  "AllowedHosts": "*"
+}

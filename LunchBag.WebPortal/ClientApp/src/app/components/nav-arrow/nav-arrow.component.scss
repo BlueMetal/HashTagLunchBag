@@ -1,0 +1,29 @@
+.arrow-nav-block{
+    height: 16vh;
+    width: 7vh;
+    position: absolute;
+    right: 5vw;
+    top:30vh;
+}
+
+.nav-image{
+    display: block;
+    height: 7vh;
+    width: 7vh;
+    margin-bottom:1vh;
+}
+.nav-image:hover{
+    cursor: pointer;
+    opacity: 0.7;
+    box-shadow: 0 10px 10px -11px rgba(52, 188, 212, 0.5);
+   
+}
+
+.nav-image-disabled{
+    display: block;
+    height: 7vh;
+    width: 7vh;
+    margin-bottom:1vh;
+    opacity: 0.3;
+    pointer-events : none;
+}

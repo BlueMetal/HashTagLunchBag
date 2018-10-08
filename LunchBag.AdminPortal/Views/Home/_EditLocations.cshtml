@@ -1,0 +1,29 @@
+﻿@model EventLocationsSettingsViewModel
+
+@using (Html.BeginForm("EditLocations", "Home", FormMethod.Post, new { id = "formEvent" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @Html.HiddenFor(model => model.EventId)
+    <div class="form-horizontal">
+        <div><input id="btnLocation" class="btn btn-success pull-right btn-sm" type="button" onclick="addElement('#gridLocations', 'AddLocation')" value="Add Location" /></div>
+        <table id="gridLocations" class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Location Name</th>
+                    <th scope="col">Goal</th>
+                    <th scope="col">Goal Status</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model.EventLocations != null)
+                {
+                    @Html.EditorFor(model => model.EventLocations)
+                }
+            </tbody>
+        </table>
+        <div><input type="button" onclick="saveFormUpdate('The locations settings were successfully saved.')" value="Save Locations Settings" class="btn btn-primary btn-block" /></div>
+    </div>
+}

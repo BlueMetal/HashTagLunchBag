@@ -1,0 +1,25 @@
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Warning"
+    }
+  },
+  "AzureAd": {
+    "Instance": "https://login.microsoftonline.com/",
+    "CallbackPath": "/signin-oidc"
+  },
+  "RestService": {
+    "RestServiceUrl": "http://lunchbagwebportalapi.default.svc.cluster.local"
+  },
+  "RestRegistrationService": {
+    "RestServiceUrl": "http://lunchbagregistrationportalapi.default.svc.cluster.local"
+  },
+  "AdminService": {
+    "PushToQueueTimeToLive": 60,
+    "LinkMobiliyaPortal": "https://lbfleet-webportal.azurewebsites.net/"
+  },
+  "ServiceBus": {
+    "Uri": "rabbitmq://abi-rabbit",
+  },
+  "AllowedHosts": "*"
+}

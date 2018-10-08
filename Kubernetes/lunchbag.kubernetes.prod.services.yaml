@@ -1,0 +1,75 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: abi-rabbit-management
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 15672
+    name: management
+  selector:
+    app: abi-rabbit
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: abi-rabbit
+spec:
+  ports:
+  - port: 5672
+    name: internal
+  selector:
+    app: abi-rabbit
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: lunchbagwebportal
+spec:
+  ports:
+  - port: 80
+    name: ingress
+  selector:
+    app: lunchbagwebportal
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: lunchbagwebportalapi
+spec:
+  ports:
+  - port: 80
+    name: ingress
+  selector:
+    app: lunchbagwebportalapi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: lunchbagregistrationportal
+spec:
+  ports:
+  - port: 80
+  selector:
+    app: lunchbagregistrationportal
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: lunchbagregistrationportalapi
+spec:
+  ports:
+  - port: 80
+  selector:
+    app: lunchbagregistrationportalapi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: lunchbagadminportal
+spec:
+  ports:
+  - port: 80
+    name: ingress
+  selector:
+    app: lunchbagadminportal

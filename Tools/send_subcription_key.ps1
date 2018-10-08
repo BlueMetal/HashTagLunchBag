@@ -1,0 +1,1 @@
+dotnet $PSScriptRoot\CommandUpdater\BW.OPCPublisher.CommandUpdater.dll "SetPollingFeatureGlobally" "HostName=XXXXX.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=XXXXXX" "IotEdgeDevice" "opc-publisher-controller" "false"

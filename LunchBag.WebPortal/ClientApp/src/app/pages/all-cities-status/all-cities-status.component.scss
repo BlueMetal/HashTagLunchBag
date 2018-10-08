@@ -1,0 +1,134 @@
+$color-red :#CE4159;
+@media only screen and (min-width: 768px) {
+.page_Content {
+    height: 100vh;
+    background-image: radial-gradient(circle, rgba(242,246,247,0.69), rgba(243,246,248, 1) 65% ), url("../../../assets/images/allCitiesbackground.png");
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    overflow: hidden;
+}
+
+.track-giving{
+    position: absolute;
+    right: 5vh;
+    top: 5vh;
+}
+
+
+.heart-container{
+    width: 100%;
+    height: 45vh;
+}
+
+.pbar-container{
+    width: 100%;
+    height: 35vh;
+}
+.pbar-area-left{
+    width: 31vw;
+    margin-left:3vw;
+    height: 100%;
+    box-shadow: 0 45px 27px -11px rgba(0,0,0,0.5);
+    
+}
+.pbar-area-mid{
+    width: 31vw;
+    height: 100%;
+    margin-left:1.5vw;
+    margin-right:1vw;
+    box-shadow: 0 45px 27px -11px rgba(0,0,0,0.5);
+}
+.pbar-area-right{
+    width: 31vw;
+    margin-right: 2vw;
+    height: 100%;
+    box-shadow: 0 45px 27px -11px rgba(0,0,0,0.5);
+}
+
+
+.progessbar-area{
+    display: flex;
+    flex-direction: row;
+    flex-wrap:nowrap;
+    width: 100%;
+    left: 50px;
+    
+}
+
+.allcities-donate-b{
+    display: none;
+}
+
+.allcities-mobile-content{
+    display: none;
+}
+
+#mobile-heart-progressbar{
+    display: none;
+}
+.mobile-line{
+    display:none;
+}
+
+.mobile-footer{
+    display:none;
+}
+
+}
+
+@media (min-width: 320px) and (max-width: 767px){
+    .trackGiving{
+        display:none;
+    }
+
+    #allcities-mobile-content{
+        background: #fff;
+        height:100%;
+        border-style: solid;
+        border-color: #EFEFEF;
+        border-width: 3px thick;
+    }
+    #allcities-logo-holder{
+        display: none;
+    }
+
+    #allcities-header-mobile {
+        background-image:url("../../../assets/images/prepare-bg3.png");
+        background-repeat: no-repeat;
+        height: 193px;
+        border-bottom-left-radius: 30%;
+        border-bottom-right-radius: 30%;
+    }
+    .stepHolder{
+        display: none;
+    }
+
+    .allcities-donate-holder{
+        padding-top: 6%;
+        padding-left: 3%;
+    }
+
+    .allcities-mobile-text {
+        padding-bottom: 6%;
+        padding-left: 9%;
+        padding-right: 8%;
+        font-size: 16px;
+        color: #737373;
+    }
+    .allcities-donate-b{
+        padding-left: 4%;
+    }
+
+    #mobile-heart-progressbar{
+        padding-left: 12%;
+    }
+
+    #mobile-city-location{
+        margin-top: 34%;
+    }
+    #city-holder{
+        display: none;
+    }
+}
+
